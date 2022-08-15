@@ -39,10 +39,18 @@ SignUp Body = {
 |               Description             |           URL          | Method |      Body   |   Status    |
 | ------------------------------------- | ---------------------- | ------ | ----------- | ----------- |
 |   Add Single Number                   |   /phone               | POST   | name,phone  | CREATED     |
-|   Add Multiple Numbers                |   /phone/multiple      | POST   | [name,phone]| CREATED     |
+|   Add Multiple Numbers                |   /phone/multiple      | POST   |  phonebook  | CREATED     |
 |   Get Single Number                   |   /phone/:id           | GET    |     \_\_    | OK          |
 |   Get All Numbers with pagination     | /phone?limit=5&page=1  | GET    |     \_\_    | OK          |
 |   Update Single Number                |   /phone/:id           | PUT    | name,phone  | OK          |
 |   Delete Single Number                |   /phone/:id           | DELETE |     \_\_    | OK          |
 |   Find All Numbers by Phase Matching  |   /phone/search/:phone | GET    |     \_\_    | OK          |
 ---
+
+```json
+phonebook : [
+    {
+        "name" : "contact_name",
+        "phone" : "contact_number"
+    }
+]
